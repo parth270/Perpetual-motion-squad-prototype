@@ -8,8 +8,21 @@
 }
 
 .form{ 
-    width:30%;
+    width:100%;
     min-height:500px;
+}
+
+@media all and (min-width:500px){
+    .form{ 
+        width:30%;
+        min-height:500px;
+    }
+}
+@media all and (min-width:500px) and (max-width:950px){
+    .form{ 
+        width:50%;
+        min-height:500px;
+    }
 }
 
 .Lottie{
@@ -51,7 +64,7 @@
 
 .input:focus{
     outline: none;
-    border:2px solid rgb(0, 191, 255)
+    border:2px solid #fa6d51
 }
 
 .btn{
@@ -59,8 +72,8 @@
     height:45px;
     color: #fff;
     border: none;
-    background-color:rgb(255, 63, 29);
-    border: 1px solid rgb(255,63,29);
+    background-color:#fa6d51;
+    border: 1px solid #fa6d51;
     border-radius:3px ;
     margin-top: 10px;
     font-weight:700;
@@ -70,6 +83,6 @@
 }
 
 .btn:hover{
-    background-color:rgb(248, 94, 67);
-    border: 1px solid rgb(248,94,67);
+    background-color:#ed7760;
+    border: 1px solid #ed7760;
 }

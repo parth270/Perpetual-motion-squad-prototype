@@ -3,6 +3,7 @@ import Card from '../Card/Card';
 import Lottie from '../Lottie/Lottie';
 import classes from './SignUp.module.css';
 import useInput from '../../Hooks/useInput';
+import useWidth from '../../Hooks/useWidth';
 
 const SignUp =()=>{
 
@@ -12,6 +13,8 @@ const SignUp =()=>{
     const {value:email,verify:emailVerify,handler:emailHandler}=useInput(e=>e.length>0);
     const {value:pass,verify:passVerify,handler:passwordHandler}=useInput(e=>e.length>0);
     const {value:confirmPass,verify:confirmPassVerify,handler:confirmPasswordHandler}=useInput(e=>e===pass);
+
+    const width = useWidth();
 
     const check=(firstVerify && lastVerify && emailVerify && numberVerify && emailVerify && passVerify && confirmPassVerify);
 
@@ -50,7 +53,8 @@ const SignUp =()=>{
                 </div>
                 <button className={classes.btn} disabled={!check} onClick={submitHandler} >Submit</button>
             </form>
-                <Lottie className={classes.Lottie} />
+            {width>500 &&
+                <Lottie className={classes.Lottie} />}
             </div>
         </Card>
     );

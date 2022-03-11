@@ -3,16 +3,23 @@ import Card from '../Card/Card';
 import Lottie from '../Lottie/Lottie';
 import classes from './Login.module.css';
 import useInput from '../../Hooks/useInput';
+import useWidth from '../../Hooks/useWidth';
 
 const Login =()=>{
 
     const {value:name,verify:nameVerify,handler:nameHandler}=useInput(e=>e.length>0);
     const {value:pass,verify:passVerify,handler:passwordHandler}=useInput(e=>e.length>0);
 
+    const width = useWidth();
+
+    const submitHandler=(e)=>{
+        e.preventDefault();
+    }
+
     return(
         <Card>
             <div className={classes.row} >
-            <form className={classes.form} >
+            <form className={classes.form} onClick={submitHandler} >
                 <p className={classes.heading} >Login</p>
                 <div className={classes['input-container']}>
                     <label className={classes.label} >Email:-</label>
@@ -24,7 +31,8 @@ const Login =()=>{
                 </div>
                 <button className={classes.btn} >Login</button>
             </form>
-                <Lottie className={classes.Lottie} />
+            {width>500 &&
+                <Lottie className={classes.Lottie} />}
             </div>
         </Card>
     );
