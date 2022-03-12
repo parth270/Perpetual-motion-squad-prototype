@@ -21,7 +21,6 @@ function App() {
   // const [button, setButton] = React.useState(false);
   // const [Button, setButton1] = React.useState(false);
 
-
   return (
     <Card justify="center" align="center" direction="column">
       <Nav />
@@ -33,13 +32,13 @@ function App() {
             and manage the world's best software developers remotely.
           </p>
           <button className={classes["btn-hire"]} >
-            <span>Apply for Jobs</span>
+            <span><Link to="/apply-for-jobs/Ques-1" >Apply for Jobs</Link></span>
             {/* <img src="/arrow.svg" alt="" /> */}
           </button>
           <p className={classes["bottom-p"]}>
             <span>Looking to hire students instead?</span>
 
-            <span className={classes.apply}>
+            <span className={classes.apply}  >
               Hire Developers <div className={classes["button-border-line"]} />
             </span>
           </p>

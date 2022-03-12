@@ -91,6 +91,11 @@
 
 }
 
+.btn-hire a{
+    color: #fff;
+    text-decoration: none;
+}
+
 .btn-hire img{
     position: absolute;
     right: 0;
